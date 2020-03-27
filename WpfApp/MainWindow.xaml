@@ -1,0 +1,48 @@
+﻿<Window
+    x:Class="MtpFileTransfer.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:MtpFileTransfer"
+    mc:Ignorable="d"
+    Title="MtpFileTransfer"
+    Height="450"
+    Width="800"
+    >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button 
+            Content="button1"
+            Click="Button_Click_1"
+            Grid.Row="0"
+            Grid.Column="0"
+            />
+
+        <Button 
+            Content="button2"
+            Click="Button_Click_2"
+            Grid.Row="1"
+            Grid.Column="0"
+            />
+
+        <TextBox 
+            x:Name="LogText"
+            HorizontalScrollBarVisibility="Auto"
+            VerticalScrollBarVisibility="Auto"
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            />
+    </Grid>
+</Window>
