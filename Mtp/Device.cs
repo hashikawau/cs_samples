@@ -3,7 +3,6 @@ using PortableDeviceTypesLib;
 using System;
 using System.IO;
 using System.Linq;
-using _tagpropertykey = PortableDeviceApiLib._tagpropertykey;
 using IPortableDeviceKeyCollection = PortableDeviceApiLib.IPortableDeviceKeyCollection;
 using IPortableDeviceValues = PortableDeviceApiLib.IPortableDeviceValues;
 
@@ -82,6 +81,8 @@ namespace Mtp {
             string destDirPath,
             string destFileName = null
         ) {
+            if (!File.Exists(srcFilePath))
+                throw new LocalFileNotExistsException(srcFilePath);
             var content = CreateDeviceContent();
             var fileName = destFileName ?? Path.GetFileName(srcFilePath);
             content.Rm(Path.Combine(destDirPath, fileName));

@@ -20,7 +20,8 @@ namespace MtpFileTransfer.Mtp.Tests {
         }
 
         [TestMethod()]
-        public void LsTest_1() {
+        //[ExpectedException()]
+        public void LsTest_1_1_fail_none_directory() {
             var result = Device0.Ls("/Internal storage/none/none");
             Debug.WriteLine("count={0}", result.Count());
             foreach (var e in result)
@@ -97,6 +98,32 @@ namespace MtpFileTransfer.Mtp.Tests {
             foreach (var e in result)
                 Debug.WriteLine("  {0}", (object)e);
             Assert.IsNotNull(result.FirstOrDefault(s => Path.GetFileName(s) == "test.sh"));
+        }
+
+        [TestMethod()]
+        public void CopyFromTest_4_1_fail_none_source() {
+            Device0.CopyFrom(
+                "/Internal storage/Download/none",
+                "C:/Users/hashikawa/Downloads"
+            );
+            var result = Directory.GetFiles("C:/Users/hashikawa/Downloads");
+            Debug.WriteLine("count={0}", result.Count());
+            foreach (var e in result)
+                Debug.WriteLine("  {0}", (object)e);
+            Assert.IsNotNull(result.FirstOrDefault(s => Path.GetFileName(s) == "test_2.sh"));
+        }
+
+        [TestMethod()]
+        public void CopyFromTest_4_2_fail_none_dest() {
+            Device0.CopyFrom(
+                "/Internal storage/Download/none",
+                "C:/???"
+            );
+            var result = Directory.GetFiles("C:/Users/hashikawa/Downloads");
+            Debug.WriteLine("count={0}", result.Count());
+            foreach (var e in result)
+                Debug.WriteLine("  {0}", (object)e);
+            Assert.IsNotNull(result.FirstOrDefault(s => Path.GetFileName(s) == "test_2.sh"));
         }
 
         [TestMethod()]

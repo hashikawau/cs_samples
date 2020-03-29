@@ -2,19 +2,19 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MtpFileTransfer.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="PcSourceDirectoryPath" Type="System.String" Scope="Application">
+    <Setting Name="CopyToDevice_SourceRootDirectoryPath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:/Application/master</Value>
     </Setting>
-    <Setting Name="DeviceDestinationDirectoryPath" Type="System.String" Scope="Application">
+    <Setting Name="CopyToDevice_DestinationRootDirectoryPath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">/Internal storage/Application/master</Value>
     </Setting>
-    <Setting Name="DeviceSourceDirectoryPath" Type="System.String" Scope="Application">
+    <Setting Name="CopyFromDevice_SourceRootDirectoryPath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">/Internal storage/Application/result</Value>
     </Setting>
-    <Setting Name="PcDestinationDirectoryPath" Type="System.String" Scope="Application">
+    <Setting Name="CopyFromDevice_DestinationRootDirectoryPath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:/Application/result</Value>
     </Setting>
-    <Setting Name="DeviceSourceFileRelativePaths" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+    <Setting Name="CopyFromDevice_SourceFileRelativePaths" Type="System.Collections.Specialized.StringCollection" Scope="Application">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
   &lt;string&gt;dir1/file1.txt&lt;/string&gt;
@@ -22,7 +22,7 @@
   &lt;string&gt;dir2/file3.txt&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
-    <Setting Name="PcSourceFileRelativePaths" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+    <Setting Name="CopyToDevice_SourceFileRelativePaths" Type="System.Collections.Specialized.StringCollection" Scope="Application">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
   &lt;string&gt;dir10/file10.txt&lt;/string&gt;

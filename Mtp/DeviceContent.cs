@@ -30,8 +30,11 @@ namespace Mtp {
             string path
         ) {
             var baseObject = ROOT;
-            foreach (var sector in PathUtils.SplitPath(path)) {
-                baseObject = FindObject(baseObject, sector);
+            var sectors = PathUtils.SplitPath(path);
+            for (int i = 0; i < sectors.Length; ++i) {
+                baseObject = FindObject(baseObject, sectors[i]);
+                if (baseObject == null)
+                    throw new RemoteFileNotExistsException(string.Join("/", sectors.Take(i + 1)));
             }
             return baseObject;
         }

@@ -26,36 +26,36 @@ namespace MtpFileTransfer.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:/Application/master")]
-        public string PcSourceDirectoryPath {
+        public string CopyToDevice_SourceRootDirectoryPath {
             get {
-                return ((string)(this["PcSourceDirectoryPath"]));
+                return ((string)(this["CopyToDevice_SourceRootDirectoryPath"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("/Internal storage/Application/master")]
-        public string DeviceDestinationDirectoryPath {
+        public string CopyToDevice_DestinationRootDirectoryPath {
             get {
-                return ((string)(this["DeviceDestinationDirectoryPath"]));
+                return ((string)(this["CopyToDevice_DestinationRootDirectoryPath"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("/Internal storage/Application/result")]
-        public string DeviceSourceDirectoryPath {
+        public string CopyFromDevice_SourceRootDirectoryPath {
             get {
-                return ((string)(this["DeviceSourceDirectoryPath"]));
+                return ((string)(this["CopyFromDevice_SourceRootDirectoryPath"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:/Application/result")]
-        public string PcDestinationDirectoryPath {
+        public string CopyFromDevice_DestinationRootDirectoryPath {
             get {
-                return ((string)(this["PcDestinationDirectoryPath"]));
+                return ((string)(this["CopyFromDevice_DestinationRootDirectoryPath"]));
             }
         }
         
@@ -67,9 +67,9 @@ namespace MtpFileTransfer.Properties {
   <string>dir1/file2.txt</string>
   <string>dir2/file3.txt</string>
 </ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection DeviceSourceFileRelativePaths {
+        public global::System.Collections.Specialized.StringCollection CopyFromDevice_SourceFileRelativePaths {
             get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["DeviceSourceFileRelativePaths"]));
+                return ((global::System.Collections.Specialized.StringCollection)(this["CopyFromDevice_SourceFileRelativePaths"]));
             }
         }
         
@@ -81,9 +81,9 @@ namespace MtpFileTransfer.Properties {
   <string>dir10/file20.txt</string>
   <string>dir20/file30.txt</string>
 </ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection PcSourceFileRelativePaths {
+        public global::System.Collections.Specialized.StringCollection CopyToDevice_SourceFileRelativePaths {
             get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["PcSourceFileRelativePaths"]));
+                return ((global::System.Collections.Specialized.StringCollection)(this["CopyToDevice_SourceFileRelativePaths"]));
             }
         }
     }

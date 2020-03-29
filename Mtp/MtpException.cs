@@ -1,11 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Mtp {
-    class MtpException : Exception {
+    public class MtpException : Exception {
         public MtpException(string message) : base(message) { }
     }
+
+    public class LocalFileNotExistsException : MtpException {
+        public LocalFileNotExistsException(string path) : base($"local file not exists: path={path}") { }
+    }
+
+    public class RemoteFileNotExistsException : MtpException {
+        public RemoteFileNotExistsException(string path) : base($"remote file not exists: path={path}") { }
+    }
+
 }
