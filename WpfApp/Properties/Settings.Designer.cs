@@ -22,5 +22,69 @@ namespace MtpFileTransfer.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:/Application/master")]
+        public string PcSourceDirectoryPath {
+            get {
+                return ((string)(this["PcSourceDirectoryPath"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("/Internal storage/Application/master")]
+        public string DeviceDestinationDirectoryPath {
+            get {
+                return ((string)(this["DeviceDestinationDirectoryPath"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("/Internal storage/Application/result")]
+        public string DeviceSourceDirectoryPath {
+            get {
+                return ((string)(this["DeviceSourceDirectoryPath"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:/Application/result")]
+        public string PcDestinationDirectoryPath {
+            get {
+                return ((string)(this["PcDestinationDirectoryPath"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+  <string>dir1/file1.txt</string>
+  <string>dir1/file2.txt</string>
+  <string>dir2/file3.txt</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection DeviceSourceFileRelativePaths {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["DeviceSourceFileRelativePaths"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+  <string>dir10/file10.txt</string>
+  <string>dir10/file20.txt</string>
+  <string>dir20/file30.txt</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection PcSourceFileRelativePaths {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["PcSourceFileRelativePaths"]));
+            }
+        }
     }
 }

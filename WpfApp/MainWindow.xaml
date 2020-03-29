@@ -7,42 +7,77 @@
     xmlns:local="clr-namespace:MtpFileTransfer"
     mc:Ignorable="d"
     Title="MtpFileTransfer"
-    Height="450"
-    Width="800"
+    SizeToContent="WidthAndHeight"
+    Height="Auto"
+    Width="Auto"
+    FontSize="20"
     >
-    <Grid>
+    <Grid Margin="20">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="Auto" MinWidth="150" />
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Button 
-            Content="button1"
-            Click="Button_Click_1"
+        <Label
+            Content="接続デバイス名"
             Grid.Row="0"
             Grid.Column="0"
+            Grid.ColumnSpan="2"
+            />
+        <Label
+            Content="{Binding DeviceName}"
+            IsEnabled="{Binding IsDeviceConnected}"
+            Grid.Row="1"
+            Grid.Column="1"
+            />
+        <Button 
+            Content="更新"
+            Width="120"
+            Height="30"
+            Click="Button_Click_0"
+            Grid.Row="1"
+            Grid.Column="2"
+            />
+
+        <Label
+            Content="PC → デバイス"
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            />
+        <Button 
+            Content="転送"
+            Width="120"
+            Height="30"
+            VerticalAlignment="Center"
+            Click="Button_Click_1"
+            Grid.Row="2"
+            Grid.Column="2"
+            />
+
+        <Label
+            Content="PC ← デバイス"
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
             />
 
         <Button 
-            Content="button2"
+            Content="転送"
+            Width="120"
+            Height="30"
             Click="Button_Click_2"
-            Grid.Row="1"
-            Grid.Column="0"
-            />
-
-        <TextBox 
-            x:Name="LogText"
-            HorizontalScrollBarVisibility="Auto"
-            VerticalScrollBarVisibility="Auto"
-            Grid.Row="2"
-            Grid.Column="0"
-            Grid.ColumnSpan="3"
+            Grid.Row="3"
+            Grid.Column="2"
             />
     </Grid>
 </Window>
